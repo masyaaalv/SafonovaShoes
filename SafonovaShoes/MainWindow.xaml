@@ -1,0 +1,38 @@
+﻿<Window x:Class="SafonovaShoes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SafonovaShoes"
+        mc:Ignorable="d"
+        Title="Чудо Обувь" Height="800" Width="1300" FontFamily="Calibri" Icon="/res/Чудо Обувь.ico">
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+           
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Name="Header">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="923"/>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="/res/Чудо Обувь.png" Grid.Column="0" HorizontalAlignment="Left" Margin="10,0,0,0" Width="100"/>
+            <TextBlock Name="Title" Text="Чудо Обувь" Grid.Column="1" HorizontalAlignment="Left" Margin="437,0,0,0" FontSize="45" FontWeight="SemiBold" Height="54" Width="225"/>
+            <Button Name="Back"  Content="Назад" Grid.Column="2" Margin="45,20,45,20"  Click="Back_Click" Width="150"  Visibility="Collapsed"/>
+        </Grid>
+        <Frame Grid.Row="2" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden" />
+
+      
+
+
+    </Grid>
+</Window>
